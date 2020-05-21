@@ -8,18 +8,24 @@ services:
     links:
       - php-fpm
     volumes:
-      - ./nginx/dev.drupal.conf:/etc/nginx/sites-available/dev.drupal.conf
-      - ./nginx/dev.drupal.conf:/etc/nginx/sites-enabled/dev.drupal.conf
+      - ./nginx/default:/etc/nginx/sites-available/default
+      - ./nginx/default:/etc/nginx/sites-enabled/default
 
       - ./logs/nginx-error.log:/var/log/nginx/error.log
       - ./logs/nginx-access.log:/var/log/nginx/access.log
+      - ./sites/:/usr/share/nginx/html/
+      #- ./sites/:/var/www/html/
 
   php-fpm:
-    build: ./php-fpm
-  db:
-    build: ./db
-  drupal:
-    build: ./drupal
+    image: php:fpm
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./sites:/usr/share/nginx/html
+  #db:
+  #  build: ./db
+  #drupal:
+  #  build: ./drupal
 
 
 
