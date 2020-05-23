@@ -51,4 +51,9 @@
 
 # Wordpress 
 
-/wordpress/.env 
+wordpress/.env
+
+# nginx logs
+
+logs/nginx-access.log
+logs/nginx-error.log 
