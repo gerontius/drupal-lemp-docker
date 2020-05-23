@@ -47,3 +47,8 @@
 /robots.txt
 /update.php
 /web.config
+
+
+# Wordpress 
+
+/wordpress/.env 
