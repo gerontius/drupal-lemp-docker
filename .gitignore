@@ -60,6 +60,7 @@ logs/nginx-error.log
 
 
 # ignore everything in the root except the "wp-content" directory.
+wordpress/install/*
 !wordpress/install/wp-content/
 wordpress/install/wp-admin/*
 wordpress/install/wp-includes/*
