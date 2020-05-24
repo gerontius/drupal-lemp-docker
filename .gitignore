@@ -70,7 +70,7 @@ logs/nginx-error.log
 !wp-content/themes/
 
 # ignore these plugins
-/wp-content/plugins/hello.php
+/wordpress/install/wp-content/plugins/hello.php
 
 # ignore specific themes
 /wp-content/themes/twenty*/
