@@ -63,7 +63,7 @@ logs/nginx-error.log
 !wordpress/install/wp-content/
 wordpress/install/wp-admin/*
 wordpress/install/wp-includes/*
-wordpress/install/*
+
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
